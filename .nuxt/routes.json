@@ -1,0 +1,130 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_7b95a9c4"
+  },
+  {
+    "path": "/dev",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index.vue",
+    "chunkName": "pages/dev/index",
+    "children": [
+      {
+        "name": "dev-index",
+        "path": "",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\index.vue",
+        "chunkName": "pages/dev/index/index",
+        "_name": "_482ca978"
+      },
+      {
+        "name": "dev-index-auth",
+        "path": "auth",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\auth.vue",
+        "chunkName": "pages/dev/index/auth",
+        "_name": "_4d6f7026"
+      },
+      {
+        "name": "dev-index-endpoints",
+        "path": "endpoints",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\endpoints.vue",
+        "chunkName": "pages/dev/index/endpoints",
+        "_name": "_0468e4f0"
+      },
+      {
+        "name": "dev-index-example",
+        "path": "example",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\example.vue",
+        "chunkName": "pages/dev/index/example",
+        "_name": "_033eb95c"
+      },
+      {
+        "name": "dev-index-files",
+        "path": "files",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\files.vue",
+        "chunkName": "pages/dev/index/files",
+        "_name": "_82bc3b2e"
+      },
+      {
+        "name": "dev-index-nav",
+        "path": "nav",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\nav.vue",
+        "chunkName": "pages/dev/index/nav",
+        "_name": "_5e860995"
+      }
+    ],
+    "_name": "_65f3df7e"
+  },
+  {
+    "name": "admin-files",
+    "path": "/admin/files",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\files.vue",
+    "chunkName": "pages/admin/files",
+    "_name": "_5e4de0e9"
+  },
+  {
+    "path": "/admin/settings",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings.vue",
+    "chunkName": "pages/admin/settings",
+    "children": [
+      {
+        "name": "admin-settings",
+        "path": "",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings\\\\index.vue",
+        "chunkName": "pages/admin/settings/index",
+        "_name": "_ae63f47e"
+      },
+      {
+        "name": "admin-settings-dashboard",
+        "path": "dashboard",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings\\\\dashboard.vue",
+        "chunkName": "pages/admin/settings/dashboard",
+        "_name": "_9a38d9fa"
+      },
+      {
+        "name": "admin-settings-email",
+        "path": "email",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings\\\\email.vue",
+        "chunkName": "pages/admin/settings/email",
+        "_name": "_5752b38b"
+      },
+      {
+        "name": "admin-settings-jira",
+        "path": "jira",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings\\\\jira.vue",
+        "chunkName": "pages/admin/settings/jira",
+        "_name": "_6bdac90f"
+      },
+      {
+        "name": "admin-settings-user",
+        "path": "user",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\settings\\\\user.vue",
+        "chunkName": "pages/admin/settings/user",
+        "_name": "_4372d2a8"
+      }
+    ],
+    "_name": "_86f0b0be"
+  },
+  {
+    "name": "admin-users",
+    "path": "/admin/users",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\users\\\\index.vue",
+    "chunkName": "pages/admin/users/index",
+    "_name": "_bf617970"
+  },
+  {
+    "name": "admin-users-id",
+    "path": "/admin/users/:id",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\admin\\\\users\\\\_id.vue",
+    "chunkName": "pages/admin/users/_id",
+    "_name": "_583510a0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e3fc45fe"
+  }
+]
