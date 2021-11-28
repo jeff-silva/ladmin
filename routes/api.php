@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 $routes = include __DIR__ . '/api_generated.php';
 
 foreach($routes as $name => $route) {
-    call_user_func_array($route['call'], $route['params']);
+    call_user_func_array($route['call'], $route['params'])->name($name);
 }

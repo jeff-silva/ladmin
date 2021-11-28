@@ -15,6 +15,14 @@
             </div>
         </div>
 
+        <div>
+            <div>Teste de personalidade MBTI</div>
+            <div><a href="https://pt.wikipedia.org/wiki/Tipologia_de_Myers-Briggs">https://pt.wikipedia.org/wiki/Tipologia_de_Myers-Briggs</a></div>
+            <div><a href="https://codepen.io/pulpexploder/pen/pNpdeq">https://codepen.io/pulpexploder/pen/pNpdeq</a></div>
+            <div><a href="https://github.com/qathom/personality-test-vue/tree/master/src">https://github.com/qathom/personality-test-vue/tree/master/src</a></div>
+            <div><a href="https://jsfiddle.net/samliew/5HUzW/">https://jsfiddle.net/samliew/5HUzW/</a></div>
+        </div>
+
         <pre>{{ settings }}</pre>
     </div>
 </template>
