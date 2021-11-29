@@ -1,1 +1,3 @@
-export const strict = true;
+export default {
+    strict: false,
+};

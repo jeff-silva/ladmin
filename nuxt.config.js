@@ -78,14 +78,14 @@ export default {
 			// https://pwa.nuxtjs.org/workbox
 			workbox: {
 				enabled: true,
-				runtimeCaching: [
-					{
-						urlPattern: 'https://fonts.googleapis.com/.*',
-						handler: 'cacheFirst',
-						method: 'GET',
-						strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-					},
-				],
+				// runtimeCaching: [
+				// 	{
+				// 		urlPattern: 'https://fonts.googleapis.com/.*',
+				// 		handler: 'cacheFirst',
+				// 		method: 'GET',
+				// 		strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+				// 	},
+				// ],
 			},
 		}],
 	],

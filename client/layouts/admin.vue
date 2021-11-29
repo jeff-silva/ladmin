@@ -89,6 +89,12 @@ export default {
 			selector.classList.toggle(className);
 		},
 	},
+
+	mounted() {
+		this.$timeout({name:'layouts-admin-sync', interval:60000, callback: () => {
+			this.$store.dispatch('app/init');
+		}});
+	},
 }
 </script>
 

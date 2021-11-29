@@ -37,6 +37,7 @@ class AppMakeRoutes extends AppBase
         $appRoutes['email-test'] = ['route'=>'email-test', 'method'=>'post', 'function'=>'emailTest'];
         $appRoutes['emails-templates'] = ['route'=>'emails-templates', 'method'=>'get', 'function'=>'emailsTemplates'];
         $appRoutes['upload'] = ['route'=>'upload', 'method'=>'post', 'function'=>'upload'];
+        $appRoutes['sync'] = ['route'=>'sync', 'method'=>'get', 'function'=>'sync'];
 
         foreach($appRoutes as $name => $appRoute) {
             $data[] = "\t'{$name}' => [";
@@ -77,6 +78,11 @@ class AppMakeRoutes extends AppBase
             $data[] = "\t'{$table_name}_clone' => [";
             $data[] = "\t\t'call' => ['Illuminate\Support\Facades\Route', 'post'],";
             $data[] = "\t\t'params' => ['{$table_route}/clone/{id}', 'App\Http\Controllers\\{$table['Controller']}@clone'],";
+            $data[] = "\t],";
+
+            $data[] = "\t'{$table_name}_import' => [";
+            $data[] = "\t\t'call' => ['Illuminate\Support\Facades\Route', 'post'],";
+            $data[] = "\t\t'params' => ['{$table_route}/import', 'App\Http\Controllers\\{$table['Controller']}@import'],";
             $data[] = "\t],";
 
             $data[] = "\t'{$table_name}_export' => [";

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="row g-0 bg-white">
-            <div class="col-2 bg-dark">
-                <ui-nav :items="compRoutes" mode="vertical" text-color="#fff"></ui-nav>
+        <div class="d-flex">
+            <div class="bg-dark" style="min-width:150px!important; max-width:150px!important;">
+                <ui-nav :items="pages" mode="vertical" text-color="#fff"></ui-nav>
             </div>
 
-            <div class="col-10">
+            <div class="flex-grow-1">
                 <ui-form method="post" action="/api/settings/save-all" v-model="settings" #default="{loading}" success-message="Configurações alteradas">
                     <div class="card">
                         <div class="card-body">
@@ -32,29 +32,8 @@ export default {
     data() {
         return {
             settings: {},
+            pages: [],
         };
-    },
-
-    computed: {
-        compRoutes() {
-            let routes = [];
-
-            this.$router.options.routes.forEach(route => {
-                if (route.path=='/admin/settings') {
-                    route.children.forEach(route2 => {
-                        let comp = require(`./settings/${route2.path||'index'}.vue`).default;
-                        let label = (typeof comp.head=='function')? (comp.head().title || route2.path): route2.path;
-
-                        routes.push({
-                            to: `/admin/settings/${route2.path}`,
-                            label,
-                        });
-                    });
-                }
-            });
-
-            return routes;
-        },
     },
 
     methods: {
@@ -67,12 +46,17 @@ export default {
         settingsSaveAll() {
             this.$axios.post('/api/settings/save-all').then(resp => {
                 this.settings = resp.data;
+                this.$store.dispatch('app/init');
             });
         },
     },
 
     mounted() {
         this.settingsGetAll();
+
+        this.$linksRoutes('/admin/settings/').then(resp => {
+            this.pages = resp;
+        });
     },
 }
 </script>

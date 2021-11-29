@@ -168,4 +168,10 @@ class AppController extends \App\Http\Controllers\Controller
             return $item;
         }, $files));
     }
+
+    public function sync() {
+        $data['settings'] = \App\Models\Settings::getAll();
+        $data['notifications'] = [];
+        return $data;
+    }
 }

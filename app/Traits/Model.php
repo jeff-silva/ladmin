@@ -58,7 +58,13 @@ trait Model
         // 
     }
 
+    public function import($format, $content) {
+        // 
+    }
+
     public function scopeExport($query) {
+        $all = $query->get()->toArray();
+        dd($all);
         return $query;
     }
 
@@ -86,6 +92,11 @@ trait Model
     }
     
 
+    public function searchParams() {
+        return [];
+    }
+
+
     public function scopeSearch($query, $params=null) {
         $params = $params? $params: request()->all();
         $params = array_merge([
@@ -95,7 +106,7 @@ trait Model
             'orderby' => 'updated_at',
             'order' => 'desc',
             'deleted' => '',
-        ], $params);
+        ], $this->searchParams(), $params);
 
         foreach($params as $field=>$value) {
             if (! $value) continue;

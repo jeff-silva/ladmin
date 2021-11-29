@@ -25,6 +25,9 @@ class AppSync extends AppBase
             'app/Http/Controllers/Controller.php' => [],
             'database/migrations' => [],
             'serve.js' => [],
+            'client/app.js' => [],
+            'client/app.scss' => [],
+            'client/pages/dev' => [],
             'client/pages/admin/settings.vue' => [],
             'client/pages/admin/settings/index.vue' => [],
             'client/pages/admin/settings/email.vue' => [],
@@ -34,10 +37,13 @@ class AppSync extends AppBase
             $from = base_path($file);
             $to = rtrim($sync_path, '/') .'/'. ltrim($file, '/');
 
-            if (!is_file($from)) {
-                foreach(glob("{$from}/*") as $from_file) {
-                    $from_file = str_replace(base_path(), '', $from_file);
-                    $from_file = ltrim($from_file, DIRECTORY_SEPARATOR);
+            $from_ext = pathinfo($file, PATHINFO_EXTENSION);
+
+            if (!$from_ext) {
+                foreach(\File::allFiles($from) as $from_file) {
+                    $from_file = $from_file->getPath() .'/'. $from_file->getBasename();
+                    $from_file = preg_replace('/\\\|\//', DIRECTORY_SEPARATOR, $from_file);
+                    $from_file = ltrim(str_replace(base_path(), '', $from_file), DIRECTORY_SEPARATOR);
                     $files[ $from_file ] = [];
                 }
                 unset($files[ $file ]);

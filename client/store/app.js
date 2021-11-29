@@ -1,11 +1,18 @@
 export default {
+    strict: false,
+
     state: {
         settings: {},
+        notifications: [],
     },
 
     actions: {
-        settingsLoad({store}) {
-            alert('/api/settings/get-all');
+        init({state}) {
+            window.$nuxt.$axios.get('/api/sync').then(resp => {
+                for(let attr in resp.data) {
+                    state[ attr ] = resp.data[attr];;
+                }
+            });
         },
     },
 }

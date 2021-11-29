@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ui-search action="/api/users/search" :params="{status:''}">
+        <ui-search api-base="/api/users/" :params="{status:''}">
             <!-- <template #fields="{params}">
                 <div class="row">
                     <div class="col-12 col-md-6">

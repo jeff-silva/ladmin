@@ -62,6 +62,10 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['upload', 'App\Http\Controllers\AppController@upload'],
 	],
+	'sync' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'get'],
+		'params' => ['sync', 'App\Http\Controllers\AppController@sync'],
+	],
 	'addresses_search' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['addresses/search', 'App\Http\Controllers\AddressesController@search'],
@@ -85,6 +89,10 @@ return [
 	'addresses_clone' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['addresses/clone/{id}', 'App\Http\Controllers\AddressesController@clone'],
+	],
+	'addresses_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['addresses/import', 'App\Http\Controllers\AddressesController@import'],
 	],
 	'addresses_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
@@ -114,6 +122,10 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['failed-jobs/clone/{id}', 'App\Http\Controllers\FailedJobsController@clone'],
 	],
+	'failed_jobs_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['failed-jobs/import', 'App\Http\Controllers\FailedJobsController@import'],
+	],
 	'failed_jobs_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['failed-jobs/export', 'App\Http\Controllers\FailedJobsController@export'],
@@ -141,6 +153,10 @@ return [
 	'files_clone' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['files/clone/{id}', 'App\Http\Controllers\FilesController@clone'],
+	],
+	'files_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['files/import', 'App\Http\Controllers\FilesController@import'],
 	],
 	'files_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
@@ -170,6 +186,10 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['migrations/clone/{id}', 'App\Http\Controllers\MigrationsController@clone'],
 	],
+	'migrations_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['migrations/import', 'App\Http\Controllers\MigrationsController@import'],
+	],
 	'migrations_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['migrations/export', 'App\Http\Controllers\MigrationsController@export'],
@@ -197,6 +217,10 @@ return [
 	'password_resets_clone' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['password-resets/clone/{id}', 'App\Http\Controllers\PasswordResetsController@clone'],
+	],
+	'password_resets_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['password-resets/import', 'App\Http\Controllers\PasswordResetsController@import'],
 	],
 	'password_resets_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
@@ -226,6 +250,10 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['personal-access-tokens/clone/{id}', 'App\Http\Controllers\PersonalAccessTokensController@clone'],
 	],
+	'personal_access_tokens_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['personal-access-tokens/import', 'App\Http\Controllers\PersonalAccessTokensController@import'],
+	],
 	'personal_access_tokens_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['personal-access-tokens/export', 'App\Http\Controllers\PersonalAccessTokensController@export'],
@@ -254,6 +282,10 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['settings/clone/{id}', 'App\Http\Controllers\SettingsController@clone'],
 	],
+	'settings_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['settings/import', 'App\Http\Controllers\SettingsController@import'],
+	],
 	'settings_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['settings/export', 'App\Http\Controllers\SettingsController@export'],
@@ -281,6 +313,10 @@ return [
 	'users_clone' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['users/clone/{id}', 'App\Http\Controllers\UsersController@clone'],
+	],
+	'users_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['users/import', 'App\Http\Controllers\UsersController@import'],
 	],
 	'users_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],

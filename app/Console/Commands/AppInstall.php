@@ -14,6 +14,7 @@ class AppInstall extends AppBase
         $this->call('optimize');
         $this->call('migrate');
         $this->call('db:seed');
+        $this->call('optimize');
         $this->call('app:db-export');
         $this->call('app:make-controllers');
         $this->call('app:make-models');

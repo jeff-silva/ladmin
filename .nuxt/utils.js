@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"APP_NAME":"ladmin","APP_URL":"http://localhost:8000","CLIENT_URL":"http://localhost:3000","colors":{"aaa":{"color":"#FF0000"}}}
+      env: {"APP_NAME":"ladmin","APP_URL":"http://localhost:5001","CLIENT_URL":"http://localhost:5000","colors":{"aaa":{"color":"#FF0000"}}}
     }
     // Only set once
 

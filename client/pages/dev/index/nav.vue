@@ -1,13 +1,19 @@
 <template>
     <div>
-        <div class="row g-0 bg-dark">
-            <div class="col-12">
-                <ui-nav v-model="nav" :items="navItems" text-color="#fff" mode="horizontal"></ui-nav>
+        <div class="row g-0">
+            <div class="col-12 col-md-6 bg-dark">
+                <ui-nav class="dev-nav-1" v-model="nav" :items="navItems" mode="horizontal"></ui-nav>
             </div>
-            <div class="col-3">
-                <ui-nav v-model="nav" :items="navItems" text-color="#fff" mode="vertical"></ui-nav>
+            <div class="col-12 col-md-6">
+                <ui-nav class="dev-nav-2" v-model="nav" :items="navItems" mode="horizontal"></ui-nav>
             </div>
-            <div class="col-9 bg-light">
+            <div class="col-2 bg-dark">
+                <ui-nav class="dev-nav-3" v-model="nav" :items="navItems" mode="vertical"></ui-nav>
+            </div>
+            <div class="col-2">
+                <ui-nav class="dev-nav-4" v-model="nav" :items="navItems" mode="vertical"></ui-nav>
+            </div>
+            <div class="col-8 bg-light">
                 <pre class="bg-light m-0 p-3" style="max-height:400px; overflow:auto;">{{ $data }}</pre>
             </div>
         </div>        
@@ -37,3 +43,18 @@ export default {
     }
 }
 </script>
+
+<style>
+.dev-nav-1 {border:solid 1px red;}
+.dev-nav-1 * {color: #fff !important;}
+
+.dev-nav-2 {border:solid 1px green;}
+.dev-nav-2 * {color: red !important;}
+
+.dev-nav-3 {border:solid 1px blue;}
+.dev-nav-3 * {color: #fff !important;}
+
+.dev-nav-4 {border:solid 1px orange;}
+.dev-nav-4 * {color: red !important;}
+
+</style>
