@@ -63,9 +63,15 @@ trait Model
     }
 
     public function scopeExport($query) {
-        $all = $query->get()->toArray();
-        dd($all);
-        return $query;
+        $format = request('format', 'json');
+        $class = app('App\Formats\\'. \Str::of($format)->studly());
+        $filename = $class->filename();
+        $content = $class->export($query);
+
+        return \Response::make($content, 200, [
+            'Content-type' => $class->mime(),
+            'Content-Disposition' => "attachment; filename=\"{$filename}\"",
+        ]);
     }
 
     // TODO: Remover apenas se existir condições where

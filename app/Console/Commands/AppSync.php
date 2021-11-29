@@ -23,6 +23,8 @@ class AppSync extends AppBase
         $files = [
             'app/Console/Commands' => [],
             'app/Http/Controllers/Controller.php' => [],
+            'app/Traits' => [],
+            'app/Formats' => [],
             'database/migrations' => [],
             'serve.js' => [],
             'client/app.js' => [],
@@ -31,6 +33,7 @@ class AppSync extends AppBase
             'client/pages/admin/settings.vue' => [],
             'client/pages/admin/settings/index.vue' => [],
             'client/pages/admin/settings/email.vue' => [],
+            'client/components' => [],
         ];
 
         foreach($files as $file => $info) {

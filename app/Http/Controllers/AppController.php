@@ -31,6 +31,7 @@ class AppController extends \App\Http\Controllers\Controller
                 'endpoints',
                 'passwordResetStart',
                 'passwordResetChange',
+                'sync',
             ],
         ]);
     }
@@ -171,7 +172,7 @@ class AppController extends \App\Http\Controllers\Controller
 
     public function sync() {
         $data['settings'] = \App\Models\Settings::getAll();
-        $data['notifications'] = [];
+        $data['formats'] = \App\Formats\Formats::all();
         return $data;
     }
 }
