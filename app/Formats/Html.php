@@ -4,6 +4,7 @@ namespace App\Formats;
 
 class Html extends Formats {
 
+    public $name = 'HTML';
     public $extension = 'html';
     public $mime = 'text/html';
 

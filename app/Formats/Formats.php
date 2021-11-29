@@ -4,6 +4,7 @@ namespace App\Formats;
 
 class Formats {
 
+    public $name = 'Default';
     public $extension = 'json';
     public $mime = 'application/json';
 

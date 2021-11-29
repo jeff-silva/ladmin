@@ -23,9 +23,11 @@
 
                             <template #dropdown>
                                 <ul class="dropdown-menu show mt-2" aria-labelledby="btnGroupDrop1">
-                                    <li><a :href="url('/export', {format:'json'})" target="_blank" class="dropdown-item">JSON</a></li>
-                                    <li><a :href="url('/export', {format:'xls'})" target="_blank" class="dropdown-item">Excel</a></li>
-                                    <li><a :href="url('/export', {format:'csv'})" target="_blank" class="dropdown-item">CSV</a></li>
+                                    <li v-for="f in $store.state.app.formats">
+                                        <a :href="url('/export', {format:f.extension})" target="_blank" class="dropdown-item">
+                                            {{ f.name }}
+                                        </a>
+                                    </li>
                                 </ul>
                             </template>
                         </ui-dropdown>

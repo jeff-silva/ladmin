@@ -4,6 +4,7 @@ namespace App\Formats;
 
 class Json extends Formats {
 
+    public $name = 'JSON';
     public $extension = 'json';
     public $mime = 'application/json';
 
@@ -14,5 +15,5 @@ class Json extends Formats {
     public function import() {
         // 
     }
-    
+
 }

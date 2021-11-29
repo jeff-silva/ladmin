@@ -4,6 +4,7 @@ export default {
     state: {
         settings: {},
         notifications: [],
+        formats: [],
     },
 
     actions: {

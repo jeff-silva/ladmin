@@ -4,6 +4,7 @@ namespace App\Formats;
 
 class Csv extends Formats {
 
+    public $name = 'Planilha CSV';
     public $extension = 'csv';
     public $mime = 'text/csv';
 
