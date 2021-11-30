@@ -18,6 +18,7 @@ You can directly use them in pages and other components without the need to impo
 - `<UiModal>` | `<ui-modal>` (components/ui-modal.vue)
 - `<UiNav>` | `<ui-nav>` (components/ui-nav.vue)
 - `<UiPassword>` | `<ui-password>` (components/ui-password.vue)
+- `<UiPlayground>` | `<ui-playground>` (components/ui-playground.vue)
 - `<UiSearch>` | `<ui-search>` (components/ui-search.vue)
 - `<UiSidebar>` | `<ui-sidebar>` (components/ui-sidebar.vue)
 - `<UiUpload>` | `<ui-upload>` (components/ui-upload.vue)

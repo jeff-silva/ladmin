@@ -35,6 +35,9 @@
   "UiPassword": {
     "description": "Auto imported from components/ui-password.vue"
   },
+  "UiPlayground": {
+    "description": "Auto imported from components/ui-playground.vue"
+  },
   "UiSearch": {
     "description": "Auto imported from components/ui-search.vue"
   },

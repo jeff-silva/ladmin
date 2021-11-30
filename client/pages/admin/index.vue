@@ -28,8 +28,6 @@
                 </div>
             </div>
         </div>
-
-        <pre>{{ $store.state.env }}</pre>
     </div>
 </template>
 

@@ -37,7 +37,6 @@ class AppMakeRoutes extends AppBase
         $appRoutes['email-test'] = ['route'=>'email-test', 'method'=>'post', 'function'=>'emailTest'];
         $appRoutes['emails-templates'] = ['route'=>'emails-templates', 'method'=>'get', 'function'=>'emailsTemplates'];
         $appRoutes['upload'] = ['route'=>'upload', 'method'=>'post', 'function'=>'upload'];
-        $appRoutes['sync'] = ['route'=>'sync', 'method'=>'get', 'function'=>'sync'];
 
         foreach($appRoutes as $name => $appRoute) {
             $data[] = "\t'{$name}' => [";

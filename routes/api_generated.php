@@ -62,10 +62,6 @@ return [
 		'call' => ['Illuminate\Support\Facades\Route', 'post'],
 		'params' => ['upload', 'App\Http\Controllers\AppController@upload'],
 	],
-	'sync' => [
-		'call' => ['Illuminate\Support\Facades\Route', 'get'],
-		'params' => ['sync', 'App\Http\Controllers\AppController@sync'],
-	],
 	'addresses_search' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['addresses/search', 'App\Http\Controllers\AddressesController@search'],

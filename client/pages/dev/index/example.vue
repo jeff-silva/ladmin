@@ -54,8 +54,6 @@
                 </div>
             </div>
         </div>
-
-        <pre>env: {{ env }}</pre>
     </div>
 </template>
 
