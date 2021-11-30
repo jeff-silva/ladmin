@@ -23,6 +23,12 @@
         "chunkName": "pages/dev/index/auth"
       },
       {
+        "name": "dev-index-editor",
+        "path": "editor",
+        "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\editor.vue",
+        "chunkName": "pages/dev/index/editor"
+      },
+      {
         "name": "dev-index-endpoints",
         "path": "endpoints",
         "component": "D:\\\\@repos\\\\ladmin\\\\client\\\\pages\\\\dev\\\\index\\\\endpoints.vue",

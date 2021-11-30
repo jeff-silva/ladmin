@@ -61,6 +61,12 @@
 
 <script>
 export default {
+    head() {
+        return {
+            title: "Exemplo",
+        };
+    },
+
     data() {
         return {
             user: false,

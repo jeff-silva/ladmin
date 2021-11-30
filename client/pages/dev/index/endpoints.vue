@@ -21,6 +21,12 @@
 
 <script>
 export default {
+    head() {
+        return {
+            title: "Endpoints",
+        };
+    },
+
     data() {
         return {
             endpoints: [],

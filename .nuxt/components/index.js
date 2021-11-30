@@ -4,6 +4,7 @@ export { default as UiAuthPassword } from '../..\\client\\components\\ui-auth-pa
 export { default as UiAuthRegister } from '../..\\client\\components\\ui-auth-register.vue'
 export { default as UiCode } from '../..\\client\\components\\ui-code.vue'
 export { default as UiDropdown } from '../..\\client\\components\\ui-dropdown.vue'
+export { default as UiEditor } from '../..\\client\\components\\ui-editor.vue'
 export { default as UiField } from '../..\\client\\components\\ui-field.vue'
 export { default as UiFile } from '../..\\client\\components\\ui-file.vue'
 export { default as UiForm } from '../..\\client\\components\\ui-form.vue'

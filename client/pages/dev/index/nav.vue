@@ -22,6 +22,12 @@
 
 <script>
 export default {
+    head() {
+        return {
+            title: "Navegação",
+        };
+    },
+
     data() {
         return {
             nav: "",

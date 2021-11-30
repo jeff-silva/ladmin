@@ -12,6 +12,7 @@ You can directly use them in pages and other components without the need to impo
 - `<UiAuthRegister>` | `<ui-auth-register>` (components/ui-auth-register.vue)
 - `<UiCode>` | `<ui-code>` (components/ui-code.vue)
 - `<UiDropdown>` | `<ui-dropdown>` (components/ui-dropdown.vue)
+- `<UiEditor>` | `<ui-editor>` (components/ui-editor.vue)
 - `<UiField>` | `<ui-field>` (components/ui-field.vue)
 - `<UiFile>` | `<ui-file>` (components/ui-file.vue)
 - `<UiForm>` | `<ui-form>` (components/ui-form.vue)

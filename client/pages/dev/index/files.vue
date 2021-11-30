@@ -10,6 +10,12 @@
 
 <script>
 export default {
+    head() {
+        return {
+            title: "Arquivos",
+        };
+    },
+
     data() {
         return {
             upload: '',
