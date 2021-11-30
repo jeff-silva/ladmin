@@ -23,7 +23,7 @@
 
                             <template #dropdown>
                                 <ul class="dropdown-menu show mt-2" aria-labelledby="btnGroupDrop1">
-                                    <li v-for="f in $store.state.app.formats">
+                                    <li v-for="f in ($store.state.env.exportExtensions || [])">
                                         <a :href="url('/export', {format:f.extension})" target="_blank" class="dropdown-item">
                                             {{ f.name }}
                                         </a>

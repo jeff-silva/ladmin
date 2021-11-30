@@ -15,6 +15,7 @@ class AppDev extends AppBase
         $this->call('app:make-models');
         $this->call('app:make-controllers');
         $this->call('app:make-routes');
+        $this->call('app:make-env');
         $this->call('optimize');
     }
 }

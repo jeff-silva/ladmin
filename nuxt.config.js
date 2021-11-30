@@ -152,9 +152,9 @@ export default {
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
-	transpile: [/^element-ui/],
+		transpile: [/^element-ui/],
 
-	extend(config, ctx) {
+		extend(config, ctx) {
 			config.resolve.alias['vue'] = 'vue/dist/vue.common';
 		},
 	},
@@ -162,12 +162,12 @@ export default {
 	hooks: {
 		generate: {
 			done (generator) {
-			const publicDir = join(__dirname, 'public');
-			removeSync(join(publicDir, '_nuxt'));
-			removeSync(join(publicDir, 'dev'));
-			copySync(generator.nuxt.options.generate.dir, publicDir);
-			rename(join(publicDir, 'index.html'), join(publicDir, 'app.html'));
-			removeSync(generator.nuxt.options.generate.dir);
+				const publicDir = join(__dirname, 'public');
+				removeSync(join(publicDir, '_nuxt'));
+				removeSync(join(publicDir, 'dev'));
+				copySync(generator.nuxt.options.generate.dir, publicDir);
+				rename(join(publicDir, 'index.html'), join(publicDir, 'app.html'));
+				removeSync(generator.nuxt.options.generate.dir);
 			},
 		},
 	},

@@ -17,9 +17,6 @@
   "UiDropdown": {
     "description": "Auto imported from components/ui-dropdown.vue"
   },
-  "UiEditor": {
-    "description": "Auto imported from components/ui-editor.vue"
-  },
   "UiField": {
     "description": "Auto imported from components/ui-field.vue"
   },
@@ -52,6 +49,15 @@
   },
   "UiContentStyle": {
     "description": "Auto imported from components/ui-content/style.vue"
+  },
+  "UiEditorCode": {
+    "description": "Auto imported from components/ui-editor/code.vue"
+  },
+  "UiEditorHtml": {
+    "description": "Auto imported from components/ui-editor/html.vue"
+  },
+  "UiEditor": {
+    "description": "Auto imported from components/ui-editor/index.vue"
   },
   "UiContentElement": {
     "description": "Auto imported from components/ui-content/element/index.js"

@@ -624,7 +624,7 @@ return [
     'users' => [
       'Name' => 'users',
       'Engine' => 'InnoDB',
-      'Auto_increment' => 2,
+      'Auto_increment' => 4,
       'Collation' => 'utf8mb4_unicode_ci',
       'Comment' => '',
       'Model' => 'User',
@@ -633,7 +633,7 @@ return [
       'Controller' => 'UsersController',
       'ControllerNamespace' => '\\App\\Http\\Controllers',
       'ControllerFile' => '\\app\\Http\\Controllers\\UsersController.php',
-      'Sql' => 'CREATE TABLE IF NOT EXISTS `users` (  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `email_verified_at` timestamp NULL DEFAULT NULL,  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `address_id` int(11) DEFAULT NULL,  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,  `created_at` timestamp NULL DEFAULT NULL,  `updated_at` timestamp NULL DEFAULT NULL,  PRIMARY KEY (`id`),  UNIQUE KEY `users_email_unique` (`email`)) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci',
+      'Sql' => 'CREATE TABLE IF NOT EXISTS `users` (  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `email_verified_at` timestamp NULL DEFAULT NULL,  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,  `address_id` int(11) DEFAULT NULL,  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,  `created_at` timestamp NULL DEFAULT NULL,  `updated_at` timestamp NULL DEFAULT NULL,  PRIMARY KEY (`id`),  UNIQUE KEY `users_email_unique` (`email`)) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci',
       'Fields' => [
         'id' => [
           'Field' => 'id',

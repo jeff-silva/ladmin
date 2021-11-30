@@ -21,6 +21,7 @@ let store = {};
 
   resolveStoreModules(require('..\\client\\store\\admin.js'), 'admin.js')
   resolveStoreModules(require('..\\client\\store\\app.js'), 'app.js')
+  resolveStoreModules(require('..\\client\\store\\env.js'), 'env.js')
 
   // If the environment supports hot reloading...
 
@@ -29,6 +30,7 @@ let store = {};
     module.hot.accept([
       '..\\client\\store\\admin.js',
       '..\\client\\store\\app.js',
+      '..\\client\\store\\env.js',
       '..\\client\\store\\index.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
