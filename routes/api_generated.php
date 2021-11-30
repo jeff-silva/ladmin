@@ -7,6 +7,7 @@ ou "php artisan app:dev" para gerar todos os arquivos. */
 \App\Http\Controllers\AddressesController::router();
 \App\Http\Controllers\FailedJobsController::router();
 \App\Http\Controllers\FilesController::router();
+\App\Http\Controllers\JiraController::router();
 \App\Http\Controllers\MigrationsController::router();
 \App\Http\Controllers\PasswordResetsController::router();
 \App\Http\Controllers\PersonalAccessTokensController::router();
@@ -157,6 +158,38 @@ return [
 	'files_export' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
 		'params' => ['files/export', 'App\Http\Controllers\FilesController@export'],
+	],
+	'jira_search' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'get'],
+		'params' => ['jira/search', 'App\Http\Controllers\JiraController@search'],
+	],
+	'jira_find' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'get'],
+		'params' => ['jira/find/{id}', 'App\Http\Controllers\JiraController@find'],
+	],
+	'jira_save' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['jira/save', 'App\Http\Controllers\JiraController@save'],
+	],
+	'jira_valid' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['jira/valid', 'App\Http\Controllers\JiraController@valid'],
+	],
+	'jira_remove' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['jira/remove', 'App\Http\Controllers\JiraController@remove'],
+	],
+	'jira_clone' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['jira/clone/{id}', 'App\Http\Controllers\JiraController@clone'],
+	],
+	'jira_import' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'post'],
+		'params' => ['jira/import', 'App\Http\Controllers\JiraController@import'],
+	],
+	'jira_export' => [
+		'call' => ['Illuminate\Support\Facades\Route', 'get'],
+		'params' => ['jira/export', 'App\Http\Controllers\JiraController@export'],
 	],
 	'migrations_search' => [
 		'call' => ['Illuminate\Support\Facades\Route', 'get'],
