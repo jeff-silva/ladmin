@@ -4,7 +4,7 @@
             <ui-editor-code :value="value" style="height:100%; min-height:50px!important;"></ui-editor-code>
         </div>
         <div class="col-6 ps-2">
-            <v-runtime-template :template="value"></v-runtime-template>
+            <v-runtime-template :template="`<div>${value}</div>`"></v-runtime-template>
         </div>
     </div>
 </template>

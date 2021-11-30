@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 class AppDbImport extends AppBase
 {
     protected $signature = 'app:db-import';
-    protected $description = 'Importa schema.sql';
+    protected $description = 'Cria tabelas e colunas no banco baseado na estrutura salva em config/database-schema.php';
 
     public function handle()
     {   

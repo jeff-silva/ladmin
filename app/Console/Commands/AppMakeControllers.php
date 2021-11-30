@@ -6,7 +6,7 @@ class AppMakeControllers extends AppBase
 {
 
     protected $signature = 'app:make-controllers';
-    protected $description = 'Criar/alterar controllers de acordo com modelo do banco';
+    protected $description = 'Criar/alterar controllers de acordo com tabelas no banco de dados';
 
     public function handle()
     {

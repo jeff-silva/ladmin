@@ -8,7 +8,7 @@ class AppMakeModels extends AppBase
 {
 
     protected $signature = 'app:make-models';
-    protected $description = 'Criar/alterar models de acordo com modelo do banco';
+    protected $description = 'Criar/alterar models de acordo com tabelas no banco de dados';
 
     public function handle()
     {

@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class AppDbExport extends AppBase
 {
     protected $signature = 'app:db-export';
-    protected $description = 'Exporta banco de dados para schema.sql';
+    protected $description = 'Exporta estrutura do banco de dados para o arquivo config/database-schema.php';
 
     public function handle()
     {   

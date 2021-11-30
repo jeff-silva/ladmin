@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class AppSync extends AppBase
 {
     protected $signature = 'app:sync';
-    protected $description = 'Sincroniza arquivos entre projeto pai e projeto atual';
+    protected $description = 'Sincroniza arquivos entre projeto atual e projeto configurado no .env (SYNC_PATH="C:\\folder\\project")';
 
     public function handle()
     {

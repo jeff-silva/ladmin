@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _7b95a9c4 = () => interopDefault(import('..\\client\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
 const _65f3df7e = () => interopDefault(import('..\\client\\pages\\dev\\index.vue' /* webpackChunkName: "pages/dev/index" */))
 const _482ca978 = () => interopDefault(import('..\\client\\pages\\dev\\index\\index.vue' /* webpackChunkName: "pages/dev/index/index" */))
+const _3821f0a8 = () => interopDefault(import('..\\client\\pages\\dev\\index\\artisan.vue' /* webpackChunkName: "pages/dev/index/artisan" */))
 const _4d6f7026 = () => interopDefault(import('..\\client\\pages\\dev\\index\\auth.vue' /* webpackChunkName: "pages/dev/index/auth" */))
 const _1a9ee7eb = () => interopDefault(import('..\\client\\pages\\dev\\index\\editor.vue' /* webpackChunkName: "pages/dev/index/editor" */))
 const _0468e4f0 = () => interopDefault(import('..\\client\\pages\\dev\\index\\endpoints.vue' /* webpackChunkName: "pages/dev/index/endpoints" */))
@@ -46,6 +47,10 @@ export const routerOptions = {
       path: "",
       component: _482ca978,
       name: "dev-index"
+    }, {
+      path: "artisan",
+      component: _3821f0a8,
+      name: "dev-index-artisan"
     }, {
       path: "auth",
       component: _4d6f7026,

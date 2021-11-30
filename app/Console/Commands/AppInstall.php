@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class AppInstall extends AppBase
 {
     protected $signature = 'app:install';
-    protected $description = 'Instala aplicação';
+    protected $description = 'Executa a instalação inicial da aplicação';
 
     public function handle()
     {   

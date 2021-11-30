@@ -1,10 +1,10 @@
 <template>
     <div>
-        <ui-upload v-model="upload" @change="$refs.file.refresh()"></ui-upload>
-        <br><br>
-        <ui-file v-model="files" ref="file"></ui-file>
-        <br><br>
-        <pre>{{ $data }}</pre>
+        <ui-playground class="mb-4" :value='[
+            `<ui-upload @change="$refs.files.refresh()" folder="/test"></ui-upload>`,
+            `<br><br>`,
+            `<ui-file ref="files" folder="/test"></ui-file>`,
+        ].join("\n")'></ui-playground>
     </div>
 </template>
 

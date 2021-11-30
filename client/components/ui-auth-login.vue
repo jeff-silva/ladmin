@@ -20,6 +20,10 @@
                 </button>
             </slot>
 
+            <nuxt-link :to="redirect" class="btn btn-primary w-100 mt-3" v-if="$store.state.auth.user && redirect">
+                Continuar como {{ $store.state.auth.user.name }}
+            </nuxt-link>
+
             <slot name="after" :loading="loading" :error="error"></slot>
         </form>
     </div>
