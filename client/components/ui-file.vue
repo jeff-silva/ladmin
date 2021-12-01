@@ -44,7 +44,7 @@
                     >
                         <div style="width:100%;">
                             <div style="height:150px;" @click.self="selectToggle(f)">
-                                <img :src="f.url" :alt="f.name" :title="f.name" :key="f.id" v-if="strContains(f.mime, 'image')" style="width:100%; height:100%; object-fit:cover;">
+                                <img :src="f.url" :alt="f.name" :title="f.name" :key="f.id" v-if="$helpers.strContains(f.mime, 'image')" style="width:100%; height:100%; object-fit:cover;">
                                 <div v-else>{{ f.name }}</div>
                             </div>
         
@@ -82,6 +82,7 @@
 
                 <ui-field label="Pasta">
                     <el-select v-model="edit.folder" class="w-100" filterable allow-create>
+                        <el-option value="">Raiz</el-option>
                         <el-option :value="f.folder" v-for="f in files.folders" :key="f.folder">/{{ f.folder || '' }}</el-option>
                     </el-select>
                 </ui-field>

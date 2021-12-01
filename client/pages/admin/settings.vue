@@ -7,6 +7,9 @@
 
             <div class="flex-grow-1">
                 <ui-form method="post" action="/api/settings/save-all" v-model="settings" #default="{loading}" success-message="Configurações alteradas">
+                    <div class="card-header">
+                        <div v-for="p in pages" v-if="p.to==$route.path">{{ p.label }}</div>
+                    </div>
                     <div class="card">
                         <div class="card-body">
                             <nuxt-child :settings="settings" :settings-get-all="settingsGetAll" :settings-save-all="settingsSaveAll"></nuxt-child>
@@ -54,7 +57,7 @@ export default {
     mounted() {
         this.settingsGetAll();
 
-        this.$linksRoutes('/admin/settings/').then(resp => {
+        this.$helpers.routes('/admin/settings/').then(resp => {
             this.pages = resp;
         });
     },

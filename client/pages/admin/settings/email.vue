@@ -46,7 +46,7 @@
                         </ui-field>
 
                         <ui-field>
-                            <ckeditor v-model="emailTest.body"></ckeditor>
+                            <ui-editor v-model="emailTest.body"></ui-editor>
                         </ui-field>
                     </template>
                     <template #footer>
@@ -65,11 +65,11 @@
                 <div class="row">
                     <div class="col-8">
                         <ui-field label="Cabeçalho de e-mail">
-                            <ui-code v-model="settings['mail.header']"></ui-code>
+                            <ui-editor v-model="settings['mail.header']" type="html"></ui-editor>
                         </ui-field>
                 
                         <ui-field label="Rodapé de e-mail">
-                            <ui-code v-model="settings['mail.footer']"></ui-code>
+                            <ui-editor v-model="settings['mail.footer']" type="html"></ui-editor>
                         </ui-field>
                     </div>
         
@@ -93,7 +93,7 @@
                         </ui-field>
 
                         <ui-field label="Template">
-                            <ui-code v-model="t.template"></ui-code>
+                            <ui-editor v-model="t.template" type="html"></ui-editor>
                         </ui-field>
 
                         <div>
@@ -110,10 +110,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import CKEditor from 'ckeditor4-vue';
-Vue.use(CKEditor);
-
 export default {
     middleware: 'auth',
     layout: 'admin',

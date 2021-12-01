@@ -15,7 +15,8 @@ Route::get('jira/export', 'App\Http\Controllers\JiraController@export');
 class JiraController extends Controller
 {
 	static function router() {
-		\Route::get('jira/test', 'App\Http\Controllers\JiraController@test');
+		\Route::get('jira/users', 'App\Http\Controllers\JiraController@users');
+		\Route::get('jira/issues', 'App\Http\Controllers\JiraController@issues');
 	}
 
 	public function __construct() {
@@ -24,9 +25,13 @@ class JiraController extends Controller
 		]);
 	}
 
-	public function test() {
-		// return \App\Models\Jira::api();
-		return \App\Models\Jira::jql("project = 'UND' AND assignee = '6138132ca1f3bd0069b5c400' AND created >= '2021-11-01' AND created <= '2021-11-30' ORDER BY created DESC");
+	public function users() {
+		return \App\Models\Jira::api('get', '/users/search');
+	}
+
+	public function issues() {
+		$accountId = request('accountId');
+		return \App\Models\Jira::jql("project = 'UND' AND assignee = '{$accountId}' AND created >= '2021-11-01' AND created <= '2021-11-30' ORDER BY created DESC");
 	}
 
 	public function search() {

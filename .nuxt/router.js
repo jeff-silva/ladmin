@@ -14,11 +14,12 @@ const _0468e4f0 = () => interopDefault(import('..\\client\\pages\\dev\\index\\en
 const _033eb95c = () => interopDefault(import('..\\client\\pages\\dev\\index\\example.vue' /* webpackChunkName: "pages/dev/index/example" */))
 const _82bc3b2e = () => interopDefault(import('..\\client\\pages\\dev\\index\\files.vue' /* webpackChunkName: "pages/dev/index/files" */))
 const _5e860995 = () => interopDefault(import('..\\client\\pages\\dev\\index\\nav.vue' /* webpackChunkName: "pages/dev/index/nav" */))
-const _5e4de0e9 = () => interopDefault(import('..\\client\\pages\\admin\\files.vue' /* webpackChunkName: "pages/admin/files" */))
+const _64573b54 = () => interopDefault(import('..\\client\\pages\\admin\\jira\\index.vue' /* webpackChunkName: "pages/admin/jira/index" */))
 const _86f0b0be = () => interopDefault(import('..\\client\\pages\\admin\\settings.vue' /* webpackChunkName: "pages/admin/settings" */))
 const _ae63f47e = () => interopDefault(import('..\\client\\pages\\admin\\settings\\index.vue' /* webpackChunkName: "pages/admin/settings/index" */))
 const _9a38d9fa = () => interopDefault(import('..\\client\\pages\\admin\\settings\\dashboard.vue' /* webpackChunkName: "pages/admin/settings/dashboard" */))
 const _5752b38b = () => interopDefault(import('..\\client\\pages\\admin\\settings\\email.vue' /* webpackChunkName: "pages/admin/settings/email" */))
+const _e8f38634 = () => interopDefault(import('..\\client\\pages\\admin\\settings\\files.vue' /* webpackChunkName: "pages/admin/settings/files" */))
 const _6bdac90f = () => interopDefault(import('..\\client\\pages\\admin\\settings\\jira.vue' /* webpackChunkName: "pages/admin/settings/jira" */))
 const _4372d2a8 = () => interopDefault(import('..\\client\\pages\\admin\\settings\\user.vue' /* webpackChunkName: "pages/admin/settings/user" */))
 const _bf617970 = () => interopDefault(import('..\\client\\pages\\admin\\users\\index.vue' /* webpackChunkName: "pages/admin/users/index" */))
@@ -77,9 +78,9 @@ export const routerOptions = {
       name: "dev-index-nav"
     }]
   }, {
-    path: "/admin/files",
-    component: _5e4de0e9,
-    name: "admin-files"
+    path: "/admin/jira",
+    component: _64573b54,
+    name: "admin-jira"
   }, {
     path: "/admin/settings",
     component: _86f0b0be,
@@ -95,6 +96,10 @@ export const routerOptions = {
       path: "email",
       component: _5752b38b,
       name: "admin-settings-email"
+    }, {
+      path: "files",
+      component: _e8f38634,
+      name: "admin-settings-files"
     }, {
       path: "jira",
       component: _6bdac90f,

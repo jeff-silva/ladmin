@@ -23,7 +23,7 @@ export default {
     },
 
     mounted() {
-        this.$linksRoutes('/dev/').then(links => {
+        this.$helpers.routes('/dev/').then(links => {
             this.pages.push({to:"/", label:"Home"});
             links.forEach(page => this.pages.push(page));
         });

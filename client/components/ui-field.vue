@@ -6,6 +6,9 @@
             </div>
             <div class="flex-grow-1">
                 <slot></slot>
+                <div class="ui-field-info">
+                    <slot name="info"></slot>
+                </div>
                 <small class="d-block text-danger" v-if="compError" v-html="compError"></small>
             </div>
         </div>
@@ -15,6 +18,9 @@
                 <slot name="label">{{ label }}</slot>
             </div>
             <slot></slot>
+            <div class="ui-field-info">
+                <slot name="info"></slot>
+            </div>
             <small class="d-block text-danger" v-if="compError" v-html="compError"></small>
         </div>
     </div>
@@ -48,3 +54,7 @@ export default {
     },
 }
 </script>
+
+<style>
+.ui-field-info * {font-size:12px; color:var(--bs-gray) !important;}
+</style>

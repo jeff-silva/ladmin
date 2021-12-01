@@ -21,6 +21,7 @@ class AppSync extends AppBase
         }
 
         $files = [
+            '.env.example' => [],
             'app/Console/Commands' => [],
             'app/Http/Controllers/Controller.php' => [],
             'app/Traits' => [],
@@ -29,10 +30,12 @@ class AppSync extends AppBase
             'serve.js' => [],
             'client/app.js' => [],
             'client/app.scss' => [],
+            'client/plugins/helpers.js' => [],
             'client/pages/dev' => [],
             'client/pages/admin/settings.vue' => [],
-            'client/pages/admin/settings/index.vue' => [],
             'client/pages/admin/settings/email.vue' => [],
+            'client/pages/admin/settings/files.vue' => [],
+            'client/pages/admin/settings/index.vue' => [],
             'client/components' => [],
         ];
 
@@ -43,6 +46,10 @@ class AppSync extends AppBase
             $from_ext = pathinfo($file, PATHINFO_EXTENSION);
 
             if (!$from_ext) {
+                if (! file_exists($to)) {
+                    mkdir($to, 0777, true);
+                }
+
                 foreach(\File::allFiles($from) as $from_file) {
                     $from_file = $from_file->getPath() .'/'. $from_file->getBasename();
                     $from_file = preg_replace('/\\\|\//', DIRECTORY_SEPARATOR, $from_file);

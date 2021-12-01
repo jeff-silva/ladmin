@@ -1,22 +1,22 @@
 <template>
     <div class="ui-editor-html">
-        <div class="bg-light p-2 border border-bottom-0">
+        <div class="p-2 border border-bottom-0">
             <div class="btn-group me-2" role="group" aria-label="Paragrafo">
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('bold');"><i class="fas fa-bold"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('italic');"><i class="fas fa-italic"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('strikeThrough');"><i class="fas fa-strikethrough"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('bold');"><i class="fas fa-bold"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('italic');"><i class="fas fa-italic"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('strikeThrough');"><i class="fas fa-strikethrough"></i></button>
             </div>
 
             <div class="btn-group me-2" role="group" aria-label="Alinhamento">
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('justifyLeft');"><i class="fas fa-align-left"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('justifyCenter');"><i class="fas fa-align-center"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('justifyFull');"><i class="fas fa-align-justify"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('justifyRight');"><i class="fas fa-align-right"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('justifyLeft');"><i class="fas fa-align-left"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('justifyCenter');"><i class="fas fa-align-center"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('justifyFull');"><i class="fas fa-align-justify"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('justifyRight');"><i class="fas fa-align-right"></i></button>
             </div>
             
             <div class="btn-group me-2" role="group" aria-label="Especial">
-                <button type="button" class="btn btn-sm btn-outline-light" :disabled="codeMode" @click="command('removeFormat');"><i class="fas fa-remove-format"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-light" @click="codeMode=!codeMode; setValue(props.value, false);" :class="{'btn-primary text-white':codeMode}"><i class="fas fa-code"></i></button>
+                <button type="button" class="btn btn-sm" :disabled="codeMode" @click="command('removeFormat');"><i class="fas fa-remove-format"></i></button>
+                <button type="button" class="btn btn-sm" @click="codeMode=!codeMode; setValue(props.value, false);" :class="{'btn-primary text-white':codeMode}"><i class="fas fa-code"></i></button>
             </div>
         </div>
 

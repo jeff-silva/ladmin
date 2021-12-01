@@ -64,7 +64,7 @@
 					</div>
 				</div>
 
-				<div class="p-3 scrollbar-thin" style="height:calc(100vh - 56px); overflow:auto;">
+				<div class="p-2 scrollbar-thin" style="height:calc(100vh - 56px); overflow:auto;">
 					<nuxt></nuxt>
 				</div>
 			</div>
@@ -91,7 +91,7 @@ export default {
 	},
 
 	mounted() {
-		this.$timeout({name:'layouts-admin-sync', interval:60000, callback: () => {
+		this.$helpers.timeout({name:'layouts-admin-sync', interval:60000, callback: () => {
 			this.$store.dispatch('app/init');
 		}});
 	},
